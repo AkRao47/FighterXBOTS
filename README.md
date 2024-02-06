@@ -5,7 +5,7 @@
 <p align="center"><a href="https://t.me/PyXen"><img src="https://te.legra.ph/file/ac9a8222dc89caa64f1f9.jpg" width="400"></a></p>
 
 
-> ⭐️ Thanks to everyone for using this op XBOTS. That is the greatest pleasure we have !
+> ⭐️ Thanks to everyone for using this op FighterXBOTS. That is the greatest pleasure we have !
 
 
 # ᴅᴇᴘʟᴏʏᴍᴇɴᴛ
