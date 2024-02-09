@@ -1,4 +1,4 @@
-# © @PyXen
+# © @neonXdark
 import asyncio
 
 from AltBots.data import GROUP, PORMS
@@ -36,33 +36,33 @@ async def gifspam(e, smex):
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%sspam(?: |$)(.*)" % hl))
 async def spam(event: events):
     if event.sender_id in SUDO_USERS:
-        altron = event.text.split(" ", 2)
+        neonXdark = event.text.split(" ", 2)
         mk = await event.get_reply_message()
 
         try:
-            if len(altron) == 3:
-                message = altron[2]
-                for _ in range(int(altron[1])):
+            if len(neonXdark) == 3:
+                message = neonXdark[2]
+                for _ in range(int(neonXdark[1])):
                     if event.reply_to_msg_id:
                         await mk.reply(message)
                     else:
                         await event.client.send_message(event.chat_id, message)
                     await asyncio.sleep(0.2)
             elif event.reply_to_msg_id and mk.media:
-                for _ in range(int(altron[1])):
+                for _ in range(int(neonXdark[1])):
                     mk = await event.client.send_file(event.chat_id, mk, caption=mk.text)
                     await gifspam(event, mk) 
                     await asyncio.sleep(0.2)  
             elif event.reply_to_msg_id and mk.text:
                 message = mk.text
-                for _ in range(int(altron[1])):
+                for _ in range(int(neonXdark[1])):
                     await event.client.send_message(event.chat_id, message)
                     await asyncio.sleep(0.2)
             else:
-                await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 Altron\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 Altron <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
+                await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 neonXdark\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 neonXdark <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
 
         except (IndexError, ValueError):
-            await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 Altron\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 Altron <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
+            await event.reply(f"😈 **Usage:**\n  » {hl}spam 13 neonXdark\n  » {hl}spam 13 <ʀᴇᴘʟʏ ᴛᴏ ᴛᴇxᴛ>\n\n**To do spam with replying to a user:**\n  » {hl}spam 13 neonXdark <ʀᴇᴘʟʏ ᴛᴏ ᴜꜱᴇʀ>")
         except Exception as e:
             print(e)
 
